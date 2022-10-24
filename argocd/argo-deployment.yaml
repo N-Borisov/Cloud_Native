@@ -15,4 +15,6 @@ spec:
     path: helm/
     repoURL: https://github.com/N-Borisov/Cloud_Native/argocd
     targetRevision: HEAD
-    
+  syncPolycy:
+    syncOptions:
+    - CreateNamespace=true    
