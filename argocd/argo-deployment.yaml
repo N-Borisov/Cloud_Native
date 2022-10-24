@@ -11,7 +11,7 @@ spec:
   source:
     helm:
       valuesFiles:
-      - values-prod.yaml
-      path:
+      - values.yaml
+      path: helm
       repoURL: https://github.com/N-Borisov/Cloud_Native/argocd
       targetRevision: HEAD
