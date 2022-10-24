@@ -1,2 +1,8 @@
 namespace:
-  name: prod
+  name: default
+ 
+image:
+  repository: bizzareniki/app.py
+  tag: v1
+
+replicaCount: 3
