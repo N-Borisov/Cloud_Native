@@ -10,9 +10,9 @@ spec:
   project: default
   source:
     helm:
-      valuesFiles:
-      - values.yaml
-      path: helm
-      repoURL: https://github.com/N-Borisov/Cloud_Native/argocd
-      targetRevision: HEAD
+      valueFiles:
+        - values.yaml
+    path: helm/
+    repoURL: https://github.com/N-Borisov/Cloud_Native/argocd
+    targetRevision: HEAD
     
