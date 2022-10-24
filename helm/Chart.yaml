@@ -1,0 +1,7 @@
+apiVersion: v1
+name: flask
+description: demostrate cloud native
+keywords:
+- flask
+- cloud native
+version: 1
