@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - 'main'
+      - 'develop'
 
 jobs:
   docker:
@@ -25,5 +26,6 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
+          path: Flask/Dockerfile
           push: true
           tags: bizzareniki/app.py:v1
