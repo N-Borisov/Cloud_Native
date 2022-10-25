@@ -2,9 +2,10 @@ name: ci
 
 on:
   push:
-    branches:
-      - 'main'
-      - 'develop'
+    branches-ignore:
+      - '**'
+    tags:
+      - 'v*.*.*'
 
 jobs:
   docker:
