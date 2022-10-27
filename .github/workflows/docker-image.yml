@@ -18,7 +18,7 @@ jobs:
       id: prep
       run: |
           branch=${GITHUB_REF##*/}          
-          ts=$(date +%F.%H%M)
+          ts=$(date +%F.%H)
           echo "::set-output name=BUILD_ID::${branch}-${ts}"          
 
     - name: Set up QEMU
