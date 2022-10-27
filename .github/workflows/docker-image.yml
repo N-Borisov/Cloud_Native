@@ -29,6 +29,6 @@ jobs:
       with:
           push: true
           context: .
-          file: Flask/Dockerfile
+          file: ./Flask/Dockerfile
           tags: |
                         ${{ env.IMAGE }}:${{ github.sha }}-${{ github.run_number }}
