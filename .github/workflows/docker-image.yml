@@ -28,7 +28,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
           push: true
-          context: .
-          file: ./Flask/Dockerfile
+          context: Flask
+          file: /Flask/Dockerfile
           tags: |
                         ${{ env.IMAGE }}:${{ github.sha }}-${{ github.run_number }}
