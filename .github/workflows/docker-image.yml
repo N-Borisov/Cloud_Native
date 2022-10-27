@@ -36,7 +36,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
           push: true
-          context: .
+          #context: .
           file: ./Dockerfile
           tags: |
                         ${{ env.IMAGE }}:${{ steps.prep.outputs.BUILD_ID }}
