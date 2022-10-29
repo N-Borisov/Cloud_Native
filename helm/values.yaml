@@ -5,7 +5,7 @@ image:
   repository: bizzareniki/app.py
   tag: v1
 
-replicaCount: 3
+replicaCount: 4
 
 service:
   name: py-app
