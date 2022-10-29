@@ -6,3 +6,6 @@ image:
   tag: v1
 
 replicaCount: 3
+
+service:
+  name: py-app
