@@ -1,10 +1,13 @@
 FROM python:3.8
 LABEL maintainer="Nikolay Borisov"
 
-ARG USER
-ENV MYSQL_DATABASE_USER =$USER
-ARG PASS
-ENV MYSQL_DATABASE_PASSWORD =$PASS
+#ARG USER
+#ENV MYSQL_DATABASE_USER =$USER
+#ARG PASS
+#ENV MYSQL_DATABASE_PASSWORD =$PASS
+
+RUN --mount=type=secret,id=user \
+  cat /run/secrets/user
 
 COPY . /app
 WORKDIR /app

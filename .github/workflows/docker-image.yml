@@ -40,5 +40,5 @@ jobs:
           tags: |
                         ${{ env.IMAGE }}:${{ steps.prep.outputs.BUILD_ID }}
           secrets: |
-                        "USER=${{ secrets.MYSQL_DATABASE_USER }}"
-                        "PASS=${{ secrets.MYSQL_DATABASE_PASSWORD }}"
+                        "user=${{ secrets.MYSQL_DATABASE_USER }}"
+                        "pass=${{ secrets.MYSQL_DATABASE_PASSWORD }}"
