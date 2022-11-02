@@ -1,9 +1,9 @@
 FROM python:3.8
 LABEL maintainer="Nikolay Borisov"
 
-ARG user
+ARG USER
 ENV MYSQL_DATABASE_USER $user
-ARG pass
+ARG PASS
 ENV MYSQL_DATABASE_PASSWORD $pass
 
 COPY . /app
