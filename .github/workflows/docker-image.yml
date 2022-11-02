@@ -39,6 +39,6 @@ jobs:
           file: ./Dockerfile
           tags: |
                         ${{ env.IMAGE }}:${{ steps.prep.outputs.BUILD_ID }}
-          secrets: |
-                        "user=${{ secrets.MYSQL_DATABASE_USER }}"
-                        "pass=${{ secrets.MYSQL_DATABASE_PASSWORD }}"
+          build-args: PASS=${{ secrets.MYSQL_DATABASE_PASSWORD }}
+                        
+          
