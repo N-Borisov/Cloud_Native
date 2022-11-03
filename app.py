@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 app.config['MYSQL_HOST'] = 'mysql.app.svc.cluster.local'
 app.config['MYSQL_USER'] = environ.get('MYSQL_DATABASE_USER')
-app.config['MYSQL_PASSWORD'] = '1234'environ.get('MYSQL_DATABASE_PASSWORD')
+app.config['MYSQL_PASSWORD'] = environ.get('MYSQL_DATABASE_PASSWORD')
 
 mysql = MySQL(app)
 
