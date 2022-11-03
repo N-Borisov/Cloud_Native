@@ -2,14 +2,17 @@ from flask import Flask
 from flask import json
 from flask import Flask,render_template, request
 from flask_mysqldb import MySQL
+from dotenv import load_dotenv
 from os import environ 
 import logging
 
 app = Flask(__name__)
 
+load_dotenv()
+
 app.config['MYSQL_HOST'] = 'mysql.app.svc.cluster.local'
-app.config['MYSQL_USER'] = environ.get('MYSQL_DATABASE_USER')
-app.config['MYSQL_PASSWORD'] = environ.get('MYSQL_DATABASE_PASSWORD')
+app.config['MYSQL_USER'] = os.getenv('MYSQL_DATABASE_USER')
+app.config['MYSQL_PASSWORD'] = os.getenv('MYSQL_DATABASE_PASSWORD')
 
 mysql = MySQL(app)
 
