@@ -1,2 +1,5 @@
 Flask==2.1.0
 werkzeug==2.0.0
+flask-mysql
+flask_mysqldb
+mysql-connector-python

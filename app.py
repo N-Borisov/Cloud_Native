@@ -1,8 +1,17 @@
 from flask import Flask
 from flask import json
+from flask import Flask,render_template, request
+from flask_mysqldb import MySQL
+from os import environ 
 import logging
 
 app = Flask(__name__)
+
+app.config['MYSQL_HOST'] = 'mysql.app.svc.cluster.local'
+app.config['MYSQL_USER'] = environ.get('MYSQL_DATABASE_USER')
+app.config['MYSQL_PASSWORD'] = '1234'environ.get('MYSQL_DATABASE_PASSWORD')
+
+mysql = MySQL(app)
 
 @app.route('/status')
 def healthcheck():
@@ -30,6 +39,14 @@ def hello():
     app.logger.info('Main request successfull')
 
     return "Cloud Native - version: 1"
+
+@app.route('/version')
+def version():
+        cur = mysql.connection.cursor()
+        cur.execute("SELECT VERSION()")
+        rv = cur.fetchall()
+        return f'You are running MYSQL Database version: {str(rv)}'
+
 
 if __name__ == "__main__":
     ## stream logs to a file
