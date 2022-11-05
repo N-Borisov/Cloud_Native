@@ -14,7 +14,7 @@ spec:
         - values.yaml
     path: helm/
     repoURL: https://github.com/N-Borisov/Cloud_Native/argocd
-    targetRevision: HEAD
+    targetRevision: test
   syncPolicy:
     syncOptions:
     - CreateNamespace=true    
