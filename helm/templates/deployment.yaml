@@ -24,7 +24,7 @@ spec:
       - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
         imagePullPolicy: IfNotPresent
         name: py-app
-      resources:
-        requests:
-          cpu: 50m
-          memory: 100Mi
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
