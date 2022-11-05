@@ -1,13 +1,11 @@
-apiVersion: v1
-items:
-- apiVersion: autoscaling/v1
-  kind: HorizontalPodAutoscaler
-  metadata:
-    name: {{ .Values.spec.containers.name }}
-    namespace: {{ .Values.namespace.name }}    
-  spec:
-    maxReplicas: 10
-    minReplicas: 3
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: {{ .Values.spec.containers.name }}
+  namespace: {{ .Values.namespace.name }}    
+spec:
+  maxReplicas: 10
+  minReplicas: 3
     scaleTargetRef:
       apiVersion: apps/v1
       kind: Deployment
