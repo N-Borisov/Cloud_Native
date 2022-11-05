@@ -13,8 +13,8 @@ spec:
       valueFiles:
         - values.yaml
     path: helm/
-    repoURL: https://github.com/N-Borisov/Cloud_Native/argocd
-    targetRevision: test
+    repoURL: https://github.com/N-Borisov/Cloud_Native
+    targetRevision: develop
   syncPolicy:
     syncOptions:
     - CreateNamespace=true    
