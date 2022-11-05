@@ -1,19 +1,12 @@
-apiVersion: autoscaling/v2
+apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ .Values.spec.containers.name }}
-  namespace: {{ .Values.namespace.name }}
+  name: py-app
 spec:
+  maxReplicas: 10
+  minReplicas: 3
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ .Values.spec.containers.name }}
-  minReplicas: 3
-  maxReplicas: 10
-  metrics:
-  - type: Resource
-    resource:
-      name: cpu
-      target:
-        type: Utilization
-        averageUtilization: 50
+    name: py-app
+  targetCPUUtilizationPercentage: 60
