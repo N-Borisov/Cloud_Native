@@ -3,9 +3,7 @@ name: ci
 on:
   push:
     branches:
-      - 'main'
-      - 'develop'
-      - 'test'
+      - 'main'    
 
 jobs:
   build-push:
