@@ -1,9 +1,13 @@
+spec:
+  containers:
+    name: py-app
+
 namespace:
   name: app
  
 image:
   repository: bizzareniki/app.py
-  tag: test-2022-11-05.17
+  tag: main-2022-11-06.16
 
 replicaCount: 3
 
