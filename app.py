@@ -29,7 +29,7 @@ def metrics():
 def hello():
     app.logger.info('Main request successfull')
 
-    return "Cloud Native - version: 2"
+    return "Cloud Native - the new wolrd order"
 
 if __name__ == "__main__":
     ## stream logs to a file
