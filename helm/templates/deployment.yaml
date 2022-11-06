@@ -1,5 +1,5 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
 metadata:
   labels:
     app: py-app
@@ -28,3 +28,10 @@ spec:
           requests:          
             cpu: 50m
             memory: 100Mi
+  minReadySeconds: 30
+  revisionHistoryLimit: 3
+  strategy:
+# --- Everything above this comment are the same as a deployment ---
+    blueGreen: # A new field for the Blue Green strategy options
+      previewService: py-app # Reference to a service
+      activeService: py-app # Reference to a service
