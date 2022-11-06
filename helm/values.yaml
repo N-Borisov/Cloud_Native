@@ -5,7 +5,7 @@ image:
   repository: bizzareniki/app.py
   tag: test-2022-11-05.17
 
-replicaCount: 3
+replicaCount: 5
 
 service:
   name: py-app
