@@ -2,14 +2,14 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: {{ .Values.spec.containers.name }}
-  name: {{ .Values.spec.containers.name }}
+    app: py-app
+  name: py-app
   namespace: {{ .Values.namespace.name }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ .Values.spec.containers.name }}
+      app: py-app
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -18,13 +18,13 @@ spec:
   template:
     metadata:
       labels:
-        app: {{ .Values.spec.containers.name }}
+        app: py-app
     spec:
       containers:
       - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
         imagePullPolicy: IfNotPresent
-        name: {{ .Values.spec.containers.name }}
+        name: py-app
         resources:
-          requests:
+          requests:          
             cpu: 50m
             memory: 100Mi
