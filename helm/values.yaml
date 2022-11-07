@@ -7,7 +7,7 @@ namespace:
  
 image:
   repository: bizzareniki/app.py
-  tag: main-2022-11-06.16
+  tag: test-2022-11-06.15
 
 replicaCount: 3
 
