@@ -17,4 +17,9 @@ spec:
     targetRevision: develop
   syncPolicy:
     syncOptions:
-    - CreateNamespace=true    
+    - CreateNamespace=true
+ignoreDifferences:
+- group: apps
+  kind: Deployments
+  jsonPointers:
+  - /spec/replicas
