@@ -14,12 +14,14 @@ spec:
         - values.yaml
     path: helm/
     repoURL: https://github.com/N-Borisov/Cloud_Native
-    targetRevision: develop
+    targetRevision: test
   syncPolicy:
+    automated:
     syncOptions:
     - CreateNamespace=true
-ignoreDifferences:
-- group: apps
-  kind: Deployments
-  jsonPointers:
-  - /spec/replicas
+    - RespectIgnoreDifferences=true
+  ignoreDifferences:
+  - group: apps
+    kind: Deployments
+    jsonPointers:
+    - /spec/replicas
