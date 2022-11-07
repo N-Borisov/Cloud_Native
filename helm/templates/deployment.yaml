@@ -34,4 +34,4 @@ spec:
 # --- Everything above this comment are the same as a deployment ---
     blueGreen: # A new field for the Blue Green strategy options
       previewService: py-app-preview # Reference to a service
-      activeService: py-app-active # Reference to a service
+      activeService: py-app # Reference to a service
