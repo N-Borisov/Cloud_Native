@@ -13,7 +13,7 @@ spec:
       valueFiles:
         - values.yaml
     path: helm/
-    repoURL: https://github.com/N-Borisov/Cloud_Native/
+    repoURL: https://github.com/N-Borisov/Cloud_Native
     targetRevision: develop
   syncPolicy:
     syncOptions:
