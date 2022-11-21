@@ -29,7 +29,7 @@ def metrics():
 def hello():
     app.logger.info('Main request successfull')
 
-    return "Cloud Native - Dry Run Friday"
+    return "<h1>Cloud Native - Dry Run Friday</h1>"
 
 if __name__ == "__main__":
     ## stream logs to a file
