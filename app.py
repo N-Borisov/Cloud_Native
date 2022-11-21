@@ -41,14 +41,14 @@ def metrics():
 def hello():
     app.logger.info('Main request successfull')
 
-    return "Cloud Native - version: 1"
+    return "<h1>Cloud Native - version: 1</h1>"
 
 @app.route('/version')
 def version():
         cur = mysql.connection.cursor()
         cur.execute("SELECT VERSION()")
         rv = cur.fetchall()
-        return f'You are running MYSQL Database version: {str(rv)}'
+        return f'<h1>You are running MYSQL Database version: {str(rv)}</h1>'
 
 
 if __name__ == "__main__":
